@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+﻿import { useMemo, useState } from "react";
 import { PLANTS, FREQUENCIES, ADD_ONS, calculatePlanPrice } from "../lib/data";
 import { api } from "../lib/api";
 import { buildWhatsappLink, buildWhatsappMessage } from "../lib/whatsapp";
@@ -65,7 +65,7 @@ export default function PlanBuilder() {
       <StepIndicator step={step} />
 
       {error && (
-        <p style={{ color: "var(--color-danger)", fontWeight: 600, marginTop: 0 }}>{error}</p>
+        <p style={{ color: "var(--colordanger)", fontWeight: 600, marginTop: 0 }}>{error}</p>
       )}
 
       {step === "plantas" && (
@@ -81,8 +81,8 @@ export default function PlanBuilder() {
                   gap: 12,
                   alignItems: "flex-start",
                   cursor: "pointer",
-                  borderColor: plantIds.includes(plant.id) ? "var(--color-primary)" : undefined,
-                  background: plantIds.includes(plant.id) ? "var(--color-primary-light)" : undefined,
+                  borderColor: plantIds.includes(plant.id) ? "var(--colorprimary)" : undefined,
+                  background: plantIds.includes(plant.id) ? "var(--colorprimarylight)" : undefined,
                 }}
               >
                 <input
@@ -93,7 +93,7 @@ export default function PlanBuilder() {
                 />
                 <div style={{ flex: 1 }}>
                   <strong>{plant.name}</strong> — R$ {plant.price}/mês
-                  <div style={{ fontSize: "0.85rem", color: "var(--color-text-muted)" }}>
+                  <div style={{ fontSize: "0.85rem", color: "var(--colortextmuted)" }}>
                     {plant.tagline}. {plant.care}
                   </div>
                 </div>
@@ -101,7 +101,7 @@ export default function PlanBuilder() {
             ))}
           </div>
           <div style={{ marginTop: 16, display: "flex", justifyContent: "flex-end" }}>
-            <button className="btn btn-primary" onClick={() => setStep("frequencia")}>
+            <button className="btn btnprimary" onClick={() => setStep("frequencia")}>
               Continuar
             </button>
           </div>
@@ -120,8 +120,8 @@ export default function PlanBuilder() {
                   display: "flex",
                   gap: 12,
                   cursor: "pointer",
-                  borderColor: frequencyId === f.id ? "var(--color-primary)" : undefined,
-                  background: frequencyId === f.id ? "var(--color-primary-light)" : undefined,
+                  borderColor: frequencyId === f.id ? "var(--colorprimary)" : undefined,
+                  background: frequencyId === f.id ? "var(--colorprimarylight)" : undefined,
                 }}
               >
                 <input
@@ -133,7 +133,7 @@ export default function PlanBuilder() {
                 <div>
                   <strong>{f.label}</strong>{" "}
                   {f.discount > 0 && <span className="badge">-{f.discount * 100}%</span>}
-                  <div style={{ fontSize: "0.85rem", color: "var(--color-text-muted)" }}>
+                  <div style={{ fontSize: "0.85rem", color: "var(--colortextmuted)" }}>
                     {f.description}
                   </div>
                 </div>
@@ -156,8 +156,8 @@ export default function PlanBuilder() {
                   display: "flex",
                   gap: 12,
                   cursor: "pointer",
-                  borderColor: addOnIds.includes(a.id) ? "var(--color-primary)" : undefined,
-                  background: addOnIds.includes(a.id) ? "var(--color-primary-light)" : undefined,
+                  borderColor: addOnIds.includes(a.id) ? "var(--colorprimary)" : undefined,
+                  background: addOnIds.includes(a.id) ? "var(--colorprimarylight)" : undefined,
                 }}
               >
                 <input
@@ -168,7 +168,7 @@ export default function PlanBuilder() {
                 />
                 <div>
                   <strong>{a.label}</strong> — +R$ {a.price}/mês
-                  <div style={{ fontSize: "0.85rem", color: "var(--color-text-muted)" }}>
+                  <div style={{ fontSize: "0.85rem", color: "var(--colortextmuted)" }}>
                     {a.description}
                   </div>
                 </div>
@@ -193,16 +193,16 @@ export default function PlanBuilder() {
               <input value={phone} onChange={(e) => setPhone(e.target.value)} placeholder="11912345678" required />
             </div>
             <div>
-              <label>E-mail (opcional)</label>
+              <label>Email (opcional)</label>
               <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="voce@email.com" />
             </div>
           </div>
           <PriceSummary price={price} />
           <div style={{ marginTop: 16, display: "flex", justifyContent: "space-between" }}>
-            <button type="button" className="btn btn-ghost" onClick={() => setStep("extras")}>
+            <button type="button" className="btn btnghost" onClick={() => setStep("extras")}>
               Voltar
             </button>
-            <button type="submit" className="btn btn-primary" disabled={submitting}>
+            <button type="submit" className="btn btnprimary" disabled={submitting}>
               {submitting ? "Enviando..." : "Ver meu plano e falar no WhatsApp"}
             </button>
           </div>
@@ -212,12 +212,12 @@ export default function PlanBuilder() {
       {step === "pronto" && (
         <div style={{ textAlign: "center" }}>
           <h3>Seu plano está pronto, {name.split(" ")[0]}! 🌿</h3>
-          <p style={{ color: "var(--color-text-muted)" }}>
+          <p style={{ color: "var(--colortextmuted)" }}>
             Valor estimado: <strong>R$ {price.toFixed(2)}/mês</strong>. Recebemos seus dados por
             aqui — agora é só confirmar no WhatsApp para fecharmos sua assinatura e combinar a
             entrega.
           </p>
-          <a className="btn btn-whatsapp" href={whatsappUrl} target="_blank" rel="noreferrer">
+          <a className="btn btnwhatsapp" href={whatsappUrl} target="_blank" rel="noreferrer">
             Falar no WhatsApp
           </a>
         </div>
@@ -242,8 +242,8 @@ function StepIndicator({ step }: { step: Step }) {
           key={s.id}
           className="badge"
           style={{
-            background: i <= activeIndex ? "var(--color-primary)" : "var(--color-primary-light)",
-            color: i <= activeIndex ? "white" : "var(--color-primary-dark)",
+            background: i <= activeIndex ? "var(--colorprimary)" : "var(--colorprimarylight)",
+            color: i <= activeIndex ? "white" : "var(--colorprimarydark)",
           }}
         >
           {i + 1}. {s.label}
@@ -256,10 +256,10 @@ function StepIndicator({ step }: { step: Step }) {
 function StepNav({ onBack, onNext }: { onBack: () => void; onNext: () => void }) {
   return (
     <div style={{ marginTop: 16, display: "flex", justifyContent: "space-between" }}>
-      <button type="button" className="btn btn-ghost" onClick={onBack}>
+      <button type="button" className="btn btnghost" onClick={onBack}>
         Voltar
       </button>
-      <button type="button" className="btn btn-primary" onClick={onNext}>
+      <button type="button" className="btn btnprimary" onClick={onNext}>
         Continuar
       </button>
     </div>
@@ -270,7 +270,7 @@ function PriceSummary({ price }: { price: number }) {
   return (
     <div
       className="card"
-      style={{ marginTop: 16, background: "var(--color-primary-light)", border: "none", display: "flex", justifyContent: "space-between" }}
+      style={{ marginTop: 16, background: "var(--colorprimarylight)", border: "none", display: "flex", justifyContent: "space-between" }}
     >
       <span>Valor estimado do plano</span>
       <strong>R$ {price.toFixed(2)}/mês</strong>

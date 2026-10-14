@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+﻿import { useEffect, useState } from "react";
 import { api, type Client } from "../../lib/api";
 import { PLANTS } from "../../lib/data";
 
@@ -62,7 +62,7 @@ export default function ClientsTab() {
               </select>
             </td>
             <td data-label="Ações">
-              <button className="btn btn-ghost" onClick={() => remove(client.id)}>
+              <button className="btn btnghost" onClick={() => remove(client.id)}>
                 Remover
               </button>
             </td>

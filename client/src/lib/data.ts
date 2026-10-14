@@ -36,21 +36,21 @@ export const PLANTS: Plant[] = [
     price: 29,
   },
   {
-    id: "espada-sao-jorge",
+    id: "espadasaojorge",
     name: "Espada de São Jorge",
     tagline: "Resistente e diz que traz proteção",
     care: "Rega quinzenal, sol direto ou meia sombra.",
     price: 34,
   },
   {
-    id: "suculenta-mix",
+    id: "suculentamix",
     name: "Mix de Suculentas",
     tagline: "Pequenas, charmosas e teimosas de viver",
     care: "Rega a cada 10 dias, luz direta.",
     price: 27,
   },
   {
-    id: "lingua-de-sogra",
+    id: "linguadesogra",
     name: "Língua de Sogra",
     tagline: "Sobrevive até a quem não tem rotina",
     care: "Rega mensal, qualquer luz serve.",
@@ -93,7 +93,7 @@ export const ADD_ONS: AddOn[] = [
     price: 15,
   },
   {
-    id: "lembretes-whats",
+    id: "lembreteswhats",
     label: "Lembretes de cuidado pelo WhatsApp",
     description: "Avisos no dia certo de regar e adubar cada planta.",
     price: 9,

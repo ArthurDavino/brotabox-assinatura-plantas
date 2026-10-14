@@ -1,4 +1,4 @@
-import { useState } from "react";
+﻿import { useState } from "react";
 import { Link } from "react-router-dom";
 import { clearAdminKey, hasAdminKey, setAdminKey, verifyAdminKey } from "../lib/api";
 import LeadsTab from "../components/admin/LeadsTab";
@@ -48,11 +48,11 @@ function AdminLogin({ onSuccess }: { onSuccess: () => void }) {
         <h2 style={{ marginTop: 0 }}>Painel BrotaBox</h2>
         <label>Chave de administrador</label>
         <input type="password" value={key} onChange={(e) => setKey(e.target.value)} placeholder="ADMIN_KEY" required />
-        {error && <p style={{ color: "var(--color-danger)" }}>{error}</p>}
-        <button className="btn btn-primary" style={{ marginTop: 12, width: "100%" }} disabled={checking}>
+        {error && <p style={{ color: "var(--colordanger)" }}>{error}</p>}
+        <button className="btn btnprimary" style={{ marginTop: 12, width: "100%" }} disabled={checking}>
           {checking ? "Verificando..." : "Entrar"}
         </button>
-        <p style={{ fontSize: "0.8rem", color: "var(--color-text-muted)", marginTop: 12 }}>
+        <p style={{ fontSize: "0.8rem", color: "var(--colortextmuted)", marginTop: 12 }}>
           A chave é a mesma definida em <code>ADMIN_KEY</code> no servidor (ver <code>.env.example</code>).
         </p>
         <Link to="/" style={{ fontSize: "0.85rem" }}>
@@ -76,10 +76,10 @@ function AdminPanel({ onLogout }: { onLogout: () => void }) {
   return (
     <div className="container" style={{ padding: "24px 20px 60px" }}>
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 20 }}>
-        <h2 style={{ margin: 0, color: "var(--color-primary-dark)" }}>🌿 Painel BrotaBox</h2>
+        <h2 style={{ margin: 0, color: "var(--colorprimarydark)" }}>🌿 Painel BrotaBox</h2>
         <div style={{ display: "flex", gap: 10 }}>
-          <Link to="/" className="btn btn-outline">Ver landing page</Link>
-          <button className="btn btn-ghost" onClick={onLogout}>Sair</button>
+          <Link to="/" className="btn btnoutline">Ver landing page</Link>
+          <button className="btn btnghost" onClick={onLogout}>Sair</button>
         </div>
       </div>
 
@@ -87,7 +87,7 @@ function AdminPanel({ onLogout }: { onLogout: () => void }) {
         {tabs.map((t) => (
           <button
             key={t.id}
-            className={tab === t.id ? "btn btn-primary" : "btn btn-outline"}
+            className={tab === t.id ? "btn btnprimary" : "btn btnoutline"}
             onClick={() => setTab(t.id)}
           >
             {t.label}

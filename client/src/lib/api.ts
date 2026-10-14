@@ -72,7 +72,7 @@ async function request<T>(
 ): Promise<T> {
   const headers = new Headers(options.headers);
   if (options.body) headers.set("Content-Type", "application/json");
-  if (admin) headers.set("x-admin-key", getAdminKey());
+  if (admin) headers.set("xadminkey", getAdminKey());
 
   const res = await fetch(`${API_URL}${path}`, { ...options, headers });
   if (!res.ok) {

@@ -21,9 +21,9 @@ próprio hábito de cuidar de plantas.
    - Passo 2: escolher frequência de entrega (mensal / bimestral / trimestral, com desconto
      crescente para frequências mais longas).
    - Passo 3: escolher extras opcionais (vaso, kit de adubo, lembretes por WhatsApp).
-   - Passo 4: nome, WhatsApp e e-mail (opcional).
+   - Passo 4: nome, WhatsApp e email (opcional).
    - Resultado: mostra o valor estimado do plano e um botão "Falar no WhatsApp" com uma
-     mensagem pré-preenchida resumindo o plano escolhido.
+     mensagem prépreenchida resumindo o plano escolhido.
 4. Ao enviar o formulário, o lead é salvo no backend (não é só um link mailto) antes de abrir
    o WhatsApp, para que ele apareça no painel de administração mesmo que a pessoa não envie a
    mensagem.
@@ -50,7 +50,7 @@ próprio hábito de cuidar de plantas.
 ## Visual e cores
 - Tema "viveiro urbano": verde principal `#1F7A4D`, verde escuro `#15532F` para títulos, verde
   clarinho `#E4F2E8` para destaques e fundos de seleção, terracota `#D97B4F` como cor de
-  apoio/acento, fundo geral em off-white quente `#F6F3EA`.
+  apoio/acento, fundo geral em offwhite quente `#F6F3EA`.
 - Botões arredondados (pill), cards com cantos suaves (14px) e sombra leve.
 - Tom de voz: direto, com leve humor sobre "matar plantas" — sem soar piadista demais.
 - Totalmente responsivo: formulário em etapas vira uma coluna única no mobile; tabelas do
@@ -58,8 +58,8 @@ próprio hábito de cuidar de plantas.
 
 ## Fora de escopo deste MVP (propositalmente manual)
 - Pagamento integrado (fechamento e cobrança são manuais, pelo WhatsApp).
-- E-mail transacional automático de novo lead.
-- Multi-fornecedor / marketplace.
+- Email transacional automático de novo lead.
+- Multifornecedor / marketplace.
 ```
 
 ## Correções pedidas depois do primeiro teste

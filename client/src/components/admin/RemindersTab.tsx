@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+﻿import { useEffect, useState } from "react";
 import { api, type Client, type Reminder } from "../../lib/api";
 
 const TYPE_LABELS: Record<Reminder["type"], string> = {
@@ -87,7 +87,7 @@ export default function RemindersTab() {
             <input type="date" value={form.dueDate} onChange={(e) => setForm({ ...form, dueDate: e.target.value })} required />
           </div>
         </div>
-        <button type="submit" className="btn btn-primary" style={{ justifySelf: "start" }}>
+        <button type="submit" className="btn btnprimary" style={{ justifySelf: "start" }}>
           Criar lembrete
         </button>
       </form>
@@ -115,7 +115,7 @@ export default function RemindersTab() {
                   <input type="checkbox" style={{ width: "auto" }} checked={r.done} onChange={(e) => toggleDone(r.id, e.target.checked)} />
                 </td>
                 <td data-label="Ações">
-                  <button className="btn btn-ghost" onClick={() => remove(r.id)}>
+                  <button className="btn btnghost" onClick={() => remove(r.id)}>
                     Remover
                   </button>
                 </td>

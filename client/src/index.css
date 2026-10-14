@@ -1,14 +1,14 @@
 :root {
-  --color-bg: #f6f3ea;
-  --color-surface: #ffffff;
-  --color-primary: #1f7a4d;
-  --color-primary-dark: #15532f;
-  --color-primary-light: #e4f2e8;
-  --color-accent: #d97b4f;
-  --color-text: #1c2b22;
-  --color-text-muted: #5b6b60;
-  --color-border: #dde4d8;
-  --color-danger: #b4432f;
+  --colorbg: #f6f3ea;
+  --colorsurface: #ffffff;
+  --colorprimary: #1f7a4d;
+  --colorprimarydark: #15532f;
+  --colorprimarylight: #e4f2e8;
+  --coloraccent: #d97b4f;
+  --colortext: #1c2b22;
+  --colortextmuted: #5b6b60;
+  --colorborder: #dde4d8;
+  --colordanger: #b4432f;
   --radius: 14px;
   --shadow: 0 10px 30px -12px rgba(28, 43, 34, 0.25);
   font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
@@ -22,8 +22,8 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background: var(--color-bg);
-  color: var(--color-text);
+  background: var(--colorbg);
+  color: var(--colortext);
 }
 
 #root {
@@ -62,32 +62,32 @@ button {
   transform: translateY(-1px);
 }
 
-.btn-primary {
-  background: var(--color-primary);
+.btnprimary {
+  background: var(--colorprimary);
   color: white;
   box-shadow: var(--shadow);
 }
 
-.btn-whatsapp {
+.btnwhatsapp {
   background: #25d366;
   color: white;
 }
 
-.btn-outline {
+.btnoutline {
   background: transparent;
-  border: 1.5px solid var(--color-primary);
-  color: var(--color-primary);
+  border: 1.5px solid var(--colorprimary);
+  color: var(--colorprimary);
 }
 
-.btn-ghost {
+.btnghost {
   background: transparent;
-  color: var(--color-text-muted);
+  color: var(--colortextmuted);
 }
 
 .card {
-  background: var(--color-surface);
+  background: var(--colorsurface);
   border-radius: var(--radius);
-  border: 1px solid var(--color-border);
+  border: 1px solid var(--colorborder);
   padding: 20px;
 }
 
@@ -97,8 +97,8 @@ button {
   border-radius: 999px;
   font-size: 0.75rem;
   font-weight: 600;
-  background: var(--color-primary-light);
-  color: var(--color-primary-dark);
+  background: var(--colorprimarylight);
+  color: var(--colorprimarydark);
 }
 
 input,
@@ -107,23 +107,23 @@ textarea {
   width: 100%;
   padding: 10px 12px;
   border-radius: 10px;
-  border: 1.5px solid var(--color-border);
+  border: 1.5px solid var(--colorborder);
   font-size: 0.95rem;
   background: white;
-  color: var(--color-text);
+  color: var(--colortext);
 }
 
 input:focus,
 select:focus,
 textarea:focus {
-  outline: 2px solid var(--color-primary);
+  outline: 2px solid var(--colorprimary);
   outline-offset: 1px;
 }
 
 label {
   font-size: 0.85rem;
   font-weight: 600;
-  color: var(--color-text-muted);
+  color: var(--colortextmuted);
   display: block;
   margin-bottom: 4px;
 }
@@ -138,11 +138,11 @@ th,
 td {
   text-align: left;
   padding: 10px 8px;
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--colorborder);
 }
 
 th {
-  color: var(--color-text-muted);
+  color: var(--colortextmuted);
   font-weight: 600;
   font-size: 0.8rem;
   text-transform: uppercase;
@@ -163,7 +163,7 @@ th {
   }
   tr {
     margin-bottom: 14px;
-    border: 1px solid var(--color-border);
+    border: 1px solid var(--colorborder);
     border-radius: 10px;
     padding: 8px;
   }
@@ -176,6 +176,6 @@ th {
     font-weight: 700;
     display: inline-block;
     min-width: 100px;
-    color: var(--color-text-muted);
+    color: var(--colortextmuted);
   }
 }

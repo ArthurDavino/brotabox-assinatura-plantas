@@ -1,7 +1,7 @@
 # 🌿 BrotaBox — assinatura de plantas para quem mata plantas
 
 MVP de um negócio de assinatura de plantas fáceis de cuidar, construído como projeto de
-portfólio (desafio "da ideia ao MVP, com IA como co-founder"). A tese: **gente que já matou
+portfólio (desafio "da ideia ao MVP, com IA como cofounder"). A tese: **gente que já matou
 planta assina se a gente escolher plantas difíceis de matar e mandar lembrete de cuidado**.
 
 🔗 **Aplicação publicada:** https://brotabox-assinatura-plantas.vercel.app
@@ -24,7 +24,7 @@ plantas resistentes + lembretes, vendidos por assinatura.
 ## Tamanho de mercado e Business Model Canvas
 
 A análise completa (TAM, SAM, SOM e o Business Model Canvas nos 9 blocos) está em
-[`docs/validacao-do-negocio.md`](docs/validacao-do-negocio.md). Resumo:
+[`docs/validacaodonegocio.md`](docs/validacaodonegocio.md). Resumo:
 
 | Camada | Estimativa |
 |---|---|
@@ -45,19 +45,19 @@ propósito:
   enviado à mão. Não há checkout integrado.
 - **Logística de entrega** — a compra junto ao viveiro e o agendamento do entregador são
   combinados manualmente; o painel só registra data e itens da entrega.
-- **Alerta de novo lead por e-mail** — fica para a seção "Ideias para evoluir" abaixo; hoje o
+- **Alerta de novo lead por email** — fica para a seção "Ideias para evoluir" abaixo; hoje o
   administrador consulta o painel diretamente.
 - **Marketplace/múltiplos fornecedores** — fica para depois que a tese se confirmar.
 
 As quatro hipóteses específicas que o MVP testa (desejabilidade, preço, canal de venda
 manual e personalização do plano) estão detalhadas em
-[`docs/validacao-do-negocio.md`](docs/validacao-do-negocio.md#4-hipóteses-que-o-mvp-precisa-testar).
+[`docs/validacaodonegocio.md`](docs/validacaodonegocio.md#4-hipóteses-que-o-mvp-precisa-testar).
 
 ## O mega prompt e as correções
 
 O prompt único (fluxo do cliente, painel de administração e cores) usado como especificação
 do MVP, mais a lista de correções pedidas depois do primeiro teste, está em
-[`docs/mega-prompt.md`](docs/mega-prompt.md).
+[`docs/megaprompt.md`](docs/megaprompt.md).
 
 ## O que o MVP entrega
 
@@ -76,8 +76,8 @@ do MVP, mais a lista de correções pedidas depois do primeiro teste, está em
   - **Lembretes**: criar lembretes (rega, adubo, cobrança, renovação) por cliente e marcar
     como feito.
 
-![Monte seu plano](docs/screenshots/plan-builder.jpg)
-![Painel administrativo](docs/screenshots/admin-leads.jpg)
+![Monte seu plano](docs/screenshots/planbuilder.jpg)
+![Painel administrativo](docs/screenshots/adminleads.jpg)
 
 ## Stack
 
@@ -101,14 +101,14 @@ brotabox/
 │   ├── src/index.js      # rotas de leads, clientes, entregas, lembretes
 │   └── data/db.json      # "banco" em arquivo (gerado em runtime, não versionado)
 └── docs/
-    ├── validacao-do-negocio.md   # TAM/SAM/SOM, BMC, hipóteses
-    ├── mega-prompt.md            # prompt usado + correções
+    ├── validacaodonegocio.md     # TAM/SAM/SOM, BMC, hipóteses
+    ├── megaprompt.md             # prompt usado + correções
     └── screenshots/              # prints do app
 ```
 
 ## Como rodar localmente
 
-Pré-requisitos: Node.js 20+.
+Prérequisitos: Node.js 20+.
 
 ```bash
 # 1. Backend
@@ -133,9 +133,9 @@ defina um `ADMIN_KEY` forte em produção.
 
 ## Ideias para evoluir
 
-- Configurar o Resend para o alerta de novo lead chegar por e-mail.
+- Configurar o Resend para o alerta de novo lead chegar por email.
 - Mandar os dados do formulário também no corpo da mensagem do WhatsApp (hoje já vai um
   resumo; dá para detalhar mais).
 - Gerar o manual da marca em PDF para quem for continuar o projeto.
 - Receber o pagamento pela própria aplicação, com o Stripe.
-- Colocar um chatbot no WhatsApp com o n8n para pré-qualificar leads antes do atendimento humano.
+- Colocar um chatbot no WhatsApp com o n8n para préqualificar leads antes do atendimento humano.

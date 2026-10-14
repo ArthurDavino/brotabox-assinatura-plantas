@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+﻿import { useEffect, useState } from "react";
 import { api, type Client, type Delivery } from "../../lib/api";
 
 export default function DeliveriesTab() {
@@ -69,7 +69,7 @@ export default function DeliveriesTab() {
             <input value={form.items} onChange={(e) => setForm({ ...form, items: e.target.value })} placeholder="Ex: ZZ + vaso" />
           </div>
         </div>
-        <button type="submit" className="btn btn-primary" style={{ justifySelf: "start" }}>
+        <button type="submit" className="btn btnprimary" style={{ justifySelf: "start" }}>
           Agendar entrega
         </button>
       </form>
@@ -102,7 +102,7 @@ export default function DeliveriesTab() {
                   </select>
                 </td>
                 <td data-label="Ações">
-                  <button className="btn btn-ghost" onClick={() => remove(d.id)}>
+                  <button className="btn btnghost" onClick={() => remove(d.id)}>
                     Remover
                   </button>
                 </td>

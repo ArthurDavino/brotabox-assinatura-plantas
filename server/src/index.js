@@ -8,11 +8,11 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const ADMIN_KEY = process.env.ADMIN_KEY || "brotabox-dev-2026";
+const ADMIN_KEY = process.env.ADMIN_KEY || "brotaboxdev2026";
 const PORT = process.env.PORT || 4000;
 
 function requireAdmin(req, res, next) {
-  const key = req.header("x-admin-key");
+  const key = req.header("xadminkey");
   if (key !== ADMIN_KEY) {
     return res.status(401).json({ error: "Chave de administrador inválida." });
   }
@@ -26,7 +26,7 @@ app.post("/api/admin/verify", (req, res) => {
   res.json({ ok: key === ADMIN_KEY });
 });
 
-// ----- Leads -----
+// Leads
 app.post("/api/leads", async (req, res) => {
   const db = await getDb();
   const { name, phone, email, plan, message } = req.body || {};
@@ -90,7 +90,7 @@ app.post("/api/leads/:id/convert", requireAdmin, async (req, res) => {
   res.status(201).json(client);
 });
 
-// ----- Clients -----
+// Clients
 app.get("/api/clients", requireAdmin, async (_req, res) => {
   const db = await getDb();
   res.json(db.data.clients);
@@ -120,7 +120,7 @@ app.delete("/api/clients/:id", requireAdmin, async (req, res) => {
   res.status(204).end();
 });
 
-// ----- Deliveries -----
+// Deliveries
 app.get("/api/deliveries", requireAdmin, async (_req, res) => {
   const db = await getDb();
   res.json(db.data.deliveries);
@@ -150,7 +150,7 @@ app.delete("/api/deliveries/:id", requireAdmin, async (req, res) => {
   res.status(204).end();
 });
 
-// ----- Reminders -----
+// Reminders
 app.get("/api/reminders", requireAdmin, async (_req, res) => {
   const db = await getDb();
   res.json(db.data.reminders);

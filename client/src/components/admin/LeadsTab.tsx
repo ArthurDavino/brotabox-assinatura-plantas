@@ -1,4 +1,4 @@
-import { Fragment, useEffect, useState } from "react";
+﻿import { Fragment, useEffect, useState } from "react";
 import { api, type Lead } from "../../lib/api";
 import { PLANTS, FREQUENCIES } from "../../lib/data";
 
@@ -43,7 +43,7 @@ export default function LeadsTab() {
   }
 
   if (loading) return <p>Carregando leads...</p>;
-  if (error) return <p style={{ color: "var(--color-danger)" }}>{error}</p>;
+  if (error) return <p style={{ color: "var(--colordanger)" }}>{error}</p>;
   if (leads.length === 0) return <p>Nenhum lead ainda. Compartilhe a landing page!</p>;
 
   return (
@@ -85,7 +85,7 @@ export default function LeadsTab() {
               </td>
               <td data-label="Ações" style={{ display: "flex", gap: 6 }}>
                 <button
-                  className="btn btn-outline"
+                  className="btn btnoutline"
                   onClick={() => {
                     setConvertingId(lead.id);
                     setAddress("");
@@ -93,7 +93,7 @@ export default function LeadsTab() {
                 >
                   Converter em cliente
                 </button>
-                <button className="btn btn-ghost" onClick={() => remove(lead.id)}>
+                <button className="btn btnghost" onClick={() => remove(lead.id)}>
                   Remover
                 </button>
               </td>
@@ -103,7 +103,7 @@ export default function LeadsTab() {
                 <td colSpan={6}>
                   <div
                     className="card"
-                    style={{ display: "flex", gap: 10, alignItems: "flex-end", flexWrap: "wrap", background: "var(--color-primary-light)" }}
+                    style={{ display: "flex", gap: 10, alignItems: "flex-end", flexWrap: "wrap", background: "var(--colorprimarylight)" }}
                   >
                     <div style={{ flex: 1, minWidth: 200 }}>
                       <label>Endereço de entrega de {lead.name}</label>
@@ -114,10 +114,10 @@ export default function LeadsTab() {
                         autoFocus
                       />
                     </div>
-                    <button className="btn btn-primary" onClick={() => confirmConvert(lead)}>
+                    <button className="btn btnprimary" onClick={() => confirmConvert(lead)}>
                       Confirmar
                     </button>
-                    <button className="btn btn-ghost" onClick={() => setConvertingId(null)}>
+                    <button className="btn btnghost" onClick={() => setConvertingId(null)}>
                       Cancelar
                     </button>
                   </div>

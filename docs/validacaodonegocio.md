@@ -1,7 +1,7 @@
 # Validação do negócio — BrotaBox
 
 > Este documento registra o raciocínio de validação feito **antes** de construir qualquer
-> tela, simulando a conversa com um "co-founder de IA" pedida no desafio: dimensionar o
+> tela, simulando a conversa com um "cofounder de IA" pedida no desafio: dimensionar o
 > mercado, montar o Business Model Canvas e listar as hipóteses que o MVP precisa testar.
 
 ## 1. A dor
@@ -17,8 +17,8 @@ manda lembrete de cuidado no WhatsApp remove as duas barreiras.
 
 ## 2. Tamanho de mercado (TAM, SAM, SOM)
 
-Estimativas top-down, com premissas explícitas (não são dados oficiais — são o tipo de
-número que um co-founder de IA ajuda a montar rapidamente para decidir se vale a pena testar):
+Estimativas topdown, com premissas explícitas (não são dados oficiais — são o tipo de
+número que um cofounder de IA ajuda a montar rapidamente para decidir se vale a pena testar):
 
 | Camada | Definição | Estimativa | Como chegamos lá |
 |---|---|---|---|
@@ -39,9 +39,9 @@ assinantes manualmente. Se isso não acontecer, o resto do dimensionamento é ir
 | **Relacionamento com clientes** | Atendimento humano 1:1 no WhatsApp para fechar a venda; lembretes periódicos; sensação de "parceiro", não só fornecedor. |
 | **Fontes de receita** | Assinatura mensal/bimestral/trimestral; upsell de extras (vaso, adubo, lembretes); venda avulsa como presente. |
 | **Recursos principais** | Catálogo curado de plantas resistentes; relacionamento com viveiros locais; conteúdo educativo; painel de leads/clientes/entregas. |
-| **Atividades-chave** | Curadoria de plantas; logística de entrega; conversão de leads no WhatsApp; gestão de lembretes e renovação. |
-| **Parcerias-chave** | Viveiros/produtores locais; entregador/motoboy ou transportadora; fornecedor de vasos e adubo. |
-| **Estrutura de custos** | Compra de plantas e insumos; frete; ferramentas (hospedagem, WhatsApp, e-mail transacional); tempo de atendimento manual; conteúdo/marketing. |
+| **Atividadeschave** | Curadoria de plantas; logística de entrega; conversão de leads no WhatsApp; gestão de lembretes e renovação. |
+| **Parceriaschave** | Viveiros/produtores locais; entregador/motoboy ou transportadora; fornecedor de vasos e adubo. |
+| **Estrutura de custos** | Compra de plantas e insumos; frete; ferramentas (hospedagem, WhatsApp, email transacional); tempo de atendimento manual; conteúdo/marketing. |
 
 ## 4. Hipóteses que o MVP precisa testar
 
@@ -61,7 +61,7 @@ assinantes manualmente. Se isso não acontecer, o resto do dimensionamento é ir
   cartão). Não há checkout integrado no MVP.
 - **Logística real de entrega**: a compra junto ao viveiro e o agendamento do entregador são
   combinados manualmente; o painel só registra a data e os itens.
-- **E-mail de novo lead**: o alerta por e-mail (Resend) é uma melhoria futura — no MVP atual o
+- **Email de novo lead**: o alerta por email (Resend) é uma melhoria futura — no MVP atual o
   administrador consulta o painel diretamente.
 - **Marketplace/múltiplos fornecedores**: fica para depois que a tese se confirmar.
 
