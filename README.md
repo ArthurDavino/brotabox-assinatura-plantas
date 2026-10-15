@@ -4,8 +4,8 @@ MVP de um negócio de assinatura de plantas fáceis de cuidar, construído como 
 portfólio (desafio "da ideia ao MVP, com IA como cofounder"). A tese: **gente que já matou
 planta assina se a gente escolher plantas difíceis de matar e mandar lembrete de cuidado**.
 
-🔗 **Aplicação publicada:** https://brotabox-assinatura-plantas.vercel.app
-🔗 **API:** https://brotabox-assinatura-plantas-production.up.railway.app (hospedada no Railway)
+🔗 **Aplicação publicada:** https://brotaboxassinaturaplantas.vercel.app
+🔗 **API:** https://brotaboxapiprod.up.railway.app (hospedada no Railway)
 
 ![Landing page do BrotaBox](docs/screenshots/landing.jpg)
 
